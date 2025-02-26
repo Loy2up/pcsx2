@@ -548,17 +548,13 @@ void MemorySearchWidget::onSearchButtonClicked()
 				case SearchType::FloatType:
 					break;
 				case SearchType::Int64Type:
-					if (value <= std::numeric_limits<unsigned long long>::max())
-						break;
+					break;
 				case SearchType::Int32Type:
-					if (value <= std::numeric_limits<unsigned long>::max())
-						break;
+					break;
 				case SearchType::Int16Type:
-					if (value <= std::numeric_limits<unsigned short>::max())
-						break;
+					break;
 				case SearchType::ByteType:
-					if (value <= std::numeric_limits<unsigned char>::max())
-						break;
+					break;
 				default:
 					QMessageBox::critical(this, tr("Debugger"), tr("Value is larger than type"));
 					return;
